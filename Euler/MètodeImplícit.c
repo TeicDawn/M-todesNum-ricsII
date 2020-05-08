@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Definimos las mismas variables que en el caso del método explícito.
-// La única nueva es el número de iteraciones, K.
+// Definimos las mismas variables que en el caso del mÃ©todo explÃ­cito.
+// La Ãºnica nueva es el nÃºmero de iteraciones, K.
 
 #define Nx 100
 #define K 100
@@ -32,15 +32,15 @@ int main(){
 	
 	double T[Nx][Nt];
 	
-	// Las condiciones iniciales también son las mismas.
+	// Las condiciones iniciales tambiÃ©n son las mismas.
 	
 	for(i = 0; i < Nx; i++){
 		T[i][0] = pow(cos(2*M_PI*i*delta_x),3);
 	}
 	
 	// Ahora, en el for sobre i dentro del for sobre j, los valores de la siguiente
-	// columna de la matriz (el siguiente valor de j) se obtienen de forma asintótica
-	// y no directa. Así pues, introducimos un for más con una variable muda k
+	// columna de la matriz (el siguiente valor de j) se obtienen de forma asintÃ³tica
+	// y no directa. AsÃ­ pues, introducimos un for mÃ¡s con una variable muda k
 	// que itere el for de las i unas K veces para cada j.
 	
 	for(j = 1; j < Nt; j++){
